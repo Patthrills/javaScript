@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <!-- google fonts: Roboto:100,300,400,500 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- style link -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Dark and light node -->
+        <div class="theme">
+            <div class="toggle" id="toggle">
+                <input type="checkbox" id="check">
+                <span class="button"></span>
+                <span class="label">☼</span>
+            </div>
+        </div>
+
+        <!-- weather card -->
+        <h2 class="title">Weather App <span>by {}patrick</span></h2>
+        <div class="location_container">
+            <div class="custom_location">
+                <input type="text" id="city" placeholder="Enter city..." required/>
+                <button id="btn" class="btn">Get Weather</button>
+            </div>
+        </div>
+
+        <div class="listed_location" id="locate" >
+            <div class="weather_info" id="expand">
+                <div class="frame">
+                    <div class="weather_flex">
+                        <div class="weather_temp_info">
+                            <div class="temp" id="get_temp">
+                            </div>
+                            <p class="info_text" id="get_temp_text"></p>
+
+                            <div class="city_name" id="get_city_name">
+                            </div>
+                        </div>
+                        <div class="vector" id="location_img">
+                        </div>
+                    </div>
+                    <p class="moreBtn">More info</p>
+                    <div class="forecast remove" id="remove">
+                        <div>
+                            <h4 class="forecast_title">Mostly cloudy: Highs 31 to 33°C and lows 25 to 27°C.</h4>
+                        </div>
+                        <div class="time_forecast" id="hour_forecast">
+                        </div>
+                    </div>
+                    <div class="day_forecast remove" id="remove">
+                        <div class="day" id="day_forecast">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

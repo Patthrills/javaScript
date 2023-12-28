@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Playpen Sans', cursive;
+    font-size: 1em;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #6cb6fb, #29b4fa);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.414);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 80vmin;
+    min-height: 400px;
+    padding: 30px 20px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.container h2{
+    display: block;
+    text-align: center;
+    font-size: 5em;
+}
+
+.text{
+    text-align: center;
+    margin: 20px 10px;
+    opacity: 0;
+    transition: opacity .3s linear;
+}
+
+.fade{
+    opacity: 1;
+}
+
+.container button{
+    display: block;
+    margin: auto;
+    position: relative;
+    border: none;
+    border-radius: 0.8em;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: ghostwhite;
+    font-weight: 400;;
+    letter-spacing: 0.3em;
+    overflow: hidden;
+}
+
+.container button > span{
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+}
+
+.container button::after,
+.container button::before{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.container button::before{
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.container button:hover::before{
+    transform: translate3d(100%, 0, 0);
+}
+
+.container button:active{
+    transform: scale(0.95);
+}

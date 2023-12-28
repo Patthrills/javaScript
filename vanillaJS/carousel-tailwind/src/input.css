@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* group classes */
+@layer components{
+    .cards {
+        @apply absolute top-1/2 translate-y-[-50%] w-52 h-80 !bg-cover !bg-center rounded-3xl shadow-xl z-10 transition-all duration-500;
+
+        &:nth-child(1), &:nth-child(2){
+            @apply left-0 top-0 translate-y-0 w-full h-full rounded-none shadow-none opacity-100;
+        }
+        &:nth-child(3){ @apply left-1/2 }
+        &:nth-child(4){ left: calc(50% + 220px)}
+        &:nth-child(5){ left: calc(50% + 440px)}
+        &:nth-child(6){ left: calc(50% + 660px)}
+        &:nth-child(7){ left: calc(50% + 880px); opacity: 0;}
+    }
+
+    .content{
+        @apply text-white absolute top-1/2 left-12 w-[500px] font-sans font-normal translate-y-[-50%] opacity-0 hidden
+        sm:left-1; 
+        text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+
+        & .title{
+            @apply text-4xl font-black;
+        }
+
+        & .description{
+            @apply font-normal text-lg mt-4 mb-4;
+        }
+
+        & button{
+            @apply border-2 pr-5 pl-5 pt-2 pb-2 bg-slate-800 bg-opacity-70 hover:bg-slate-900 hover:opacity-80 transition-all duration-700
+        }
+    }
+
+    .cards:nth-of-type(2) .content{
+        @apply block animate-show;
+    }
+
+    .nav{
+        @apply absolute bottom-5 left-1/2 -translate-x-1/2 cursor-pointer z-50;
+
+        & .btn{
+            @apply w-10 h-10 bg-white rounded-full p-2 bg-opacity-70 hover:bg-opacity-95 transition-all duration-700 inline-block
+        }
+    }
+
+    @media (width < 650px){
+        .content{
+            @apply left-4 w-56;
+
+            & .title{
+                @apply text-3xl
+            }
+
+            & .description{
+                @apply text-lg
+            }
+        }
+
+        .cards{
+            @apply w-48 h-72;
+
+
+            &:nth-child(3){ @apply left-[55%] }
+            &:nth-child(4){ left: calc(50% + 220px)}
+            &:nth-child(5){ left: calc(50% + 440px)}
+            &:nth-child(6){ left: calc(50% + 660px)}
+            &:nth-child(7){ left: calc(50% + 880px)}
+        }
+    }
+}
