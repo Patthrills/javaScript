@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping App</title>
+    <!-- Styling: tailwind css -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .ui-menu-item {
+      background-color: #272727;
+      color: #fff;
+      font-style: italic;
+      padding: 10px 15px;
+      width: 300px;
+    }
+    </style>
+</head>
+<body class="p-0 m-0 box-content">
+    <main class="px-20 bg-purple-500 h-full w-full">
+        <h1 class="text-center text-5xl py-5 font-bold text-white">Fruits Shopping App!</h1>
+
+        <form class="w-1/2 h-10 my-8 mx-auto text-center">
+            <input type="text" class="w-80 h-9 rounded-l-lg shadow-lg px-5 focus:outline-none" id="search" placeholder="Enter fruit name">
+            <button class="w-20 h-9 rounded-r-lg text-center text-white shadow-lg bg-blue-600 hover:bg-blue-700" id="btn">Check</button>
+        </form>
+
+        <section class="flex justify-around items-center container mx-auto h-[36rem] p-8">
+            <div class="w-1/4 h-full flex flex-col justify-between shrink image_data">
+                <div class="bg-white shadow-lg rounded-xl overflow-hidden h-[15rem] ">
+                    <img class="w-full h-full object-cover image_link1" src="https://source.unsplash.com/sliced-orange-fruit-on-brown-wooden-table-9002s2VnOAY" alt="image">
+                </div>
+                <div class="bg-white shadow-lg rounded-xl overflow-hidden h-[15rem]">
+                    <img class="w-full h-full object-cover image_link2" src="https://source.unsplash.com/orange-fruits-on-white-ceramic-plate-A4BBdJQu2co" alt="image">
+                </div>
+            </div>
+            
+            <div class="w-1/2 h-full px-16 py-10 rounded-xl shadow-lg bg-white relative overflow-auto shrink mx-3" id="result">
+                <h1 class="text-center font-semibold text-3xl mb-8 fruit_title"></h1>
+                <div class="flex justify-between content-evenly">
+                    <p class="block">Potash:</p>
+                    <p class="block italic">30</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="block">Poth:</p>
+                    <p class="block italic">30</p>
+                </div>
+            </div>
+
+            <div class="w-[250px] h-full px-6 py-10 rounded-xl shadow-lg bg-white relative overflow-auto">
+                <h1 class="text-center font-semibold text-xl mb-8">Market Price</h1>
+                <div class="flex justify-between">
+                    <p class="block">Poth:</p>
+                    <p class="block italic">30</p>
+                </div>
+                <div class="absolute bottom-3 w-[200px] px-6 mx-auto text-center">
+                    <div class="flex justify-between">
+                        <p class="block font-bold">Poth:</p>
+                        <p class="block">30</p>
+                    </div>
+                    <button class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xl text-center px-5 py-2 rounded-xl my-4">Pay now</button>
+                </div>
+            </div>
+        </section>
+        <p id="demo"></p>
+
+        <footer>
+            <p class="text-center italic text-white py-5">Powered by Tailwind and jQuery</p>
+        </footer>
+    </main>
+
+    <!-- Scripts: jquery, jquery UI -->
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
